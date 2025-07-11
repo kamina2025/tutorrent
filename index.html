@@ -3,9 +3,40 @@
   <head>
     <meta charset="utf-8">
     <title>Instant.io Client</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="/tutorrent/main.css">
+    <style>
+      /* Estilos básicos para ocultar el scrollbar de carga, etc. */
+      html, body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden; /* Oculta el scrollbar inicial */
+      }
+      /* Asegúrate de que el body tenga el 100% de alto y ancho */
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f0f0f0; /* Un color de fondo simple */
+      }
+      /* Contenedor principal donde la app injecta su contenido */
+      #instant-io-app-container {
+        width: 100%;
+        height: 100%;
+      }
+      /* Para el error "logHeading is null" (si es parte del sistema de log de la app) */
+      #log-heading {
+        display: none; /* Ocultarlo si no lo usaremos visualmente */
+      }
+    </style>
   </head>
   <body>
-    <script src="bundle.js"></script>
-  </body>
+    <div id="instant-io-app-container"></div>
+
+    <div id="log-heading"></div>
+
+    <script src="/tutorrent/bundle.js"></script>
+
+    </body>
 </html>
